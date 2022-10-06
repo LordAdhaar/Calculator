@@ -39,18 +39,23 @@ body{
     color: white;
     border-radius: 20px;
     text-shadow: 1px 1px 8px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    padding: 10px 20px;
 }
 
 .result h3{
-    height: 22px;
-    width: 395.89px ;
+    margin: 0px;
     font-family: calcFont;
+    font-size: 21px;
 }
 
 .result h1{
-    height: 37px ;
-    width: 395.89px ;
+    margin: 0px;
     font-family: calcFont;
+    font-size: 56px;
 }
 
 .result h3, .result h1{
@@ -97,4 +102,13 @@ body{
     background-color: #00000069;
     text-shadow: 1px 1px 8px black;
 
+}
+
+.firstRow button:hover, .secondRow button:hover, .thirdRow button:hover, .fourthRow button:hover, .topRow button:hover{
+    filter: invert(100%);
+}
+
+.firstRow button:active, .secondRow button:active, .thirdRow button:active, .fourthRow button:active, .topRow button:active{
+    transform: scale(1.05,1.05);
+    border: 1px solid purple;
 }
