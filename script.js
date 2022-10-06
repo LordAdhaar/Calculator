@@ -56,6 +56,7 @@ let indexOfOperator;
 let a;
 let b;
 let allOperators = ["+","-","*","/"];
+let count = 0;
 
 
 const buttons = document.querySelectorAll(".keys button");
@@ -71,6 +72,7 @@ function change_subRes(){
         finResDisplayValue = "0";
         subRes.textContent = subResDisplayValue;
         finRes.textContent = finResDisplayValue;
+        count=0;
     }
     else if (this.textContent === "DELETE"){
 
@@ -83,26 +85,49 @@ function change_subRes(){
         subResArray.pop();
         subResDisplayValue = subResArray.join("");
         console.log(subResDisplayValue);
-
     }
     else if(this.textContent === "+" || this.textContent==="-" || this.textContent==="/" || this.textContent==="*"){
 
-        let result = operate(operator,a,b);
+        for(let operation of allOperators){
+            console.log(subResDisplayValue.charAt(subResDisplayValue.length-1)) ;
+            if (subResDisplayValue.charAt(subResDisplayValue.length-1)===operation){
+                return;
+            }
+        }
 
-        operator = this.textContent;
+        if(count === 0){
+            operator= this.textContent;
+            subResDisplayValue = finResDisplayValue + operator;
+            subRes.textContent = subResDisplayValue;
+            indexOfOperator = subResDisplayValue.indexOf(operator);
+            count+=1;
+        }
+        else{
+            let array = subResDisplayValue.split(operator);
+            console.log(array);
+            a = array[0];
+            b = array[1];
+            console.log(count);
+            let result = operate(operator,a,b);
 
-        subResDisplayValue = finResDisplayValue + this.textContent;
-        subRes.textContent = subResDisplayValue;
-        
-        console.log(subResDisplayValue);
+            operator = this.textContent;
+            subResDisplayValue = result+ operator;
+            subRes.textContent = subResDisplayValue;
 
-        indexOfOperator = subResDisplayValue.indexOf(operator);
+            finResDisplayValue = result;
+            finRes.textContent = finResDisplayValue;
+
+            indexOfOperator = subResDisplayValue.indexOf(operator);
+
+            count+=1;
+
+        }
     }
     else if (this.textContent==="="){
 
         for(let operation of allOperators){
             console.log(subResDisplayValue.charAt(subResDisplayValue.length-1)) ;
-            if (subResDisplayValue.charAt(subResDisplayValue.length-1)===operation || subResDisplayValue.charAt(subResDisplayValue.length-1)==="="){
+            if (subResDisplayValue.charAt(subResDisplayValue.length-1)===operation || subResDisplayValue.charAt(subResDisplayValue.length-1)==="=" || operator === null){
                 return;
             }
         }
@@ -115,6 +140,8 @@ function change_subRes(){
 
         finResDisplayValue = `${operate(operator,a,b)}`;
         finRes.textContent = finResDisplayValue;
+
+        count = 0;
     }
     else{
 
