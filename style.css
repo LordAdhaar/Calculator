@@ -90,6 +90,7 @@ body{
     background-color: #00000069;
     color: white;
     text-shadow: 1px 1px 8px black;
+    border: 0.1px solid white;
 
 }
 
@@ -101,6 +102,7 @@ body{
     color: white;
     background-color: #00000069;
     text-shadow: 1px 1px 8px black;
+    border: 0.1px solid white;
 
 }
 
