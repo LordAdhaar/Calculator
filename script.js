@@ -127,7 +127,7 @@ function change_subRes(){
 
         for(let operation of allOperators){
             console.log(subResDisplayValue.charAt(subResDisplayValue.length-1)) ;
-            if (subResDisplayValue.charAt(subResDisplayValue.length-1)===operation || subResDisplayValue.charAt(subResDisplayValue.length-1)==="=" ){
+            if (subResDisplayValue.charAt(subResDisplayValue.length-1)===operation || subResDisplayValue.charAt(subResDisplayValue.length-1)==="=" || subResDisplayValue === "" || operator === null){
                 return;
             }
         }

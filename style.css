@@ -5,33 +5,52 @@ body{
     align-items: center;
     min-height: 100vh;
     gap: 10px;
+    background-image: url(./images/hackerman.jpg);
+    background-size: 100%;
+}
+
+@font-face {
+    font-family: calcFont;
+    src: url(./fonts/digital-7.ttf);
 }
 
 .calculator{
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
+    border-radius: 20px;
 }
-
+.calculator p{
+    text-shadow: 1px 1px 8px black;
+    margin-bottom: 0px;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
 .calculator .result{
-    border: 2px solid black;
     height: 107.438px;
     width: 395.891px;
     text-align: right;
     padding: 10px;
-
+    background-color: #00000069;
+    color: white;
+    border-radius: 20px;
+    text-shadow: 1px 1px 8px black;
 }
 
 .result h3{
     height: 22px;
     width: 395.89px ;
+    font-family: calcFont;
 }
 
 .result h1{
     height: 37px ;
     width: 395.89px ;
+    font-family: calcFont;
 }
 
 .result h3, .result h1{
@@ -39,11 +58,11 @@ body{
 }
 
 .calculator .keys{
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+    border-radius: 20px;
 }
 
 .keys .topRow{
@@ -59,13 +78,23 @@ body{
 
 
 .topRow button{
-    font-size: 32px;
+    font-size: 25px;
     height: 80px;
     width: 190px;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #00000069;
+    color: white;
+    text-shadow: 1px 1px 8px black;
+
 }
 
 .firstRow button, .secondRow button, .thirdRow button, .fourthRow button{
-    font-size: 32px;
+    font-size: 25px;
     height: 80px;
     width: 90px;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    background-color: #00000069;
+    text-shadow: 1px 1px 8px black;
+
 }
