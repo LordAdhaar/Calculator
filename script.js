@@ -15,6 +15,10 @@ function divide(a,b){
     return a/b;
 }
 
+function roundToTwo(num){
+    return +(Math.round(num + "e+2") + "e-2");
+}
+
 console.log(add(1,2),subtract(1,2),multiply(2,3),divide(10,3));
 
 function operate(operator, a, b){
@@ -108,7 +112,8 @@ function change_subRes(){
             a = array[0];
             b = array[1];
             console.log(count);
-            let result = operate(operator,a,b);
+            let result = roundToTwo(operate(operator,a,b));
+            console.log(result);
 
             operator = this.textContent;
             subResDisplayValue = result+ operator;
@@ -138,7 +143,7 @@ function change_subRes(){
         subResDisplayValue += this.textContent;
         subRes.textContent = subResDisplayValue;
 
-        finResDisplayValue = `${operate(operator,a,b)}`;
+        finResDisplayValue = `${roundToTwo(operate(operator,a,b))}`;
         finRes.textContent = finResDisplayValue;
 
         count = 0;

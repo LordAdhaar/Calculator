@@ -5,13 +5,28 @@ body{
     align-items: center;
     min-height: 100vh;
     gap: 10px;
-    background-image: url(./images/hackerman.jpg);
+    background-color: lightblue;
     background-size: 100%;
+}
+
+@font-face {
+    font-family: Brut;
+    src: url(./fonts/Grotesque-MT-Black.ttf);
+}
+
+@font-face {
+    font-family: Delogy;
+    src: url(./fonts/Delogy-Regular.ttf);
 }
 
 @font-face {
     font-family: calcFont;
     src: url(./fonts/digital-7.ttf);
+}
+
+@font-face {
+    font-family: Alterno;
+    src: url(./fonts/Alternox\ Regular.otf);
 }
 
 .calculator{
@@ -22,28 +37,25 @@ body{
     border-radius: 20px;
 }
 .calculator p{
-    text-shadow: 1px 1px 8px black;
-    margin-bottom: 0px;
-    font-size: 32px;
-    color: white;
+    margin: 0px;
+    font-size: 26px;
+    color: black;
     font-weight: bold;
-    margin-left: 10px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: Alterno, sans-serif;
 }
 .calculator .result{
+    background-color: white;
     height: 107.438px;
     width: 395.891px;
     text-align: right;
     padding: 10px;
-    background-color: #00000069;
-    color: white;
-    border-radius: 20px;
-    text-shadow: 1px 1px 8px black;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap:20px;
     padding: 10px 20px;
+    border: 5px solid;
 }
 
 .result h3{
@@ -86,11 +98,10 @@ body{
     font-size: 25px;
     height: 80px;
     width: 190px;
-    font-family: 'Orbitron', sans-serif;
-    background-color: #00000069;
-    color: white;
-    text-shadow: 1px 1px 8px black;
-    border: 0.1px solid white;
+    font-family: Alterno, sans-serif;
+    background-color:white;
+    color: black;
+    border: 3px solid ;
 
 }
 
@@ -98,11 +109,10 @@ body{
     font-size: 25px;
     height: 80px;
     width: 90px;
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    background-color: #00000069;
-    text-shadow: 1px 1px 8px black;
-    border: 0.1px solid white;
+    font-family: Alterno, sans-serif;
+    color: black;
+    background-color: white ;
+    border: 3px solid ;
 
 }
 
